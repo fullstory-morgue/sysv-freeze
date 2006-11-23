@@ -1,0 +1,12 @@
+diff -Nur sysv-freeze-0.2.4/policy-rc.d sysv-freeze-0.2.4.new/policy-rc.d
+--- sysv-freeze-0.2.4/policy-rc.d	2006-10-07 18:29:33.000000000 +0200
++++ sysv-freeze-0.2.4.new/policy-rc.d	2006-10-07 18:32:59.000000000 +0200
+@@ -7,7 +7,7 @@
+ #
+ 
+ FROZEN_FILE="/etc/frozen-rc.d"
+-WHITELIST="dbus-1 dbus"
++WHITELIST="dbus-1 dbus initscripts sysvinit sysvinit-utils sysv-rc udev wpasupplicant"
+ QUIET=
+ 
+ if [ "$1" = "--quiet" ]; then

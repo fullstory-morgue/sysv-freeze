@@ -1,0 +1,8 @@
+#!/bin/sh
+
+[ -L /etc/rcS.d/S04udev ] && mv /etc/rcS.d/S04udev /etc/rcS.d/S03udev
+
+#DEBHELPER#
+
+exit 0
+

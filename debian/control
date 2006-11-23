@@ -1,0 +1,16 @@
+Source: sysv-freeze
+Section: admin
+Priority: extra
+Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Build-Depends-Indep: cdbs, debhelper (>= 5.0.0)
+Standards-Version: 3.7.2
+
+Package: sysv-freeze
+Architecture: all
+Depends: sysvinit (>=2.86), sysv-rc, perl
+Description: freeze/ unfreeze your rc-configuration
+ The script "freeze-rc.d" can be used to freeze the  current rc- configuration
+ and prohibit installed, but deactivated services from being activated.
+ Before an apt-get (dist-)upgrade you can execute freeze-rc.d to save your 
+ current rc-configuration to /etc/frozen-rc.d, after the (dist-)upgrade 
+ "unfreeze-rc.d" can be started to release the lock.

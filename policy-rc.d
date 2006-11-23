@@ -7,6 +7,7 @@
 #
 
 FROZEN_FILE="/etc/frozen-rc.d"
+WHITELIST="dbus-1 dbus"
 QUIET=
 
 if [ "$1" = "--quiet" ]; then
@@ -22,8 +23,7 @@ if [ "$1" = "--list" ]; then
             echo "yes"
             exit 0
         fi
-        egrep -q " $1 " "$FROZEN_FILE"
-        if [ $? -ne 0 ]; then
+        if egrep -q "^$1$" "$FROZEN_FILE" || echo "$WHITELIST" | tr ' ' '\n' | egrep -q "^$1$"; then
             echo "no"
             exit 101
         else
@@ -45,6 +45,8 @@ fi
 [ ! -f "$FROZEN_FILE" ] && exit 0
 
 egrep -q "^$1$" "$FROZEN_FILE" && exit 0
+
+echo "$WHITELIST" | tr ' ' '\n' | egrep -q "^$1$" && exit 0
 
 exit 101
 

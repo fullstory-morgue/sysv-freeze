@@ -1,0 +1,77 @@
+sysv-freeze (0.2.4-6) unstable; urgency=low
+
+  * add udev to whitelist.
+  * add udev hotfix to postinst.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 12 Oct 2006 01:40:52 +0200
+
+sysv-freeze (0.2.4-5) unstable; urgency=low
+
+  * add sysvinit/ initscripts to whitelist.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat,  7 Oct 2006 18:33:30 +0200
+
+sysv-freeze (0.2.4-4) unstable; urgency=low
+
+  [ Andreas Loibl ]
+  * fixed "whitelist" bug, now using whitelist in policy-rc.d, not in
+    freeze-rc.d
+
+  [ Stefan Lippers-Hollmann ]
+  * sponsor upload.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 30 Dec 2005 13:46:02 +0100
+
+sysv-freeze (0.2.4-3) unstable; urgency=low
+
+  * added "whitelist"
+
+ -- Andreas Loibl <andreas@andreas-loibl.de>  Fri, 30 Dec 2005 12:30:26 +0100
+
+sysv-freeze (0.2.4-2) unstable; urgency=low
+
+  * fix dpkg-divert-error in postrm-script
+
+ -- Andreas Loibl <andreas@andreas-loibl.de>  Fri, 30 Dec 2005 12:30:19 +0100
+
+sysv-freeze (0.2.4-1) unstable; urgency=low
+
+  * new upstream release:
+    - policy-rc.d doesn't return "behaviour undefined" anymore
+
+ -- Andreas Loibl <andreas@andreas-loibl.de>  Sun, 11 Sep 2005 10:04:22 +0200
+
+sysv-freeze (0.2.3-1) unstable; urgency=low
+
+  * overhaul packaging.
+  * fix lintian/ linda errors.
+  * ensure proper diversion of update-rc.d.
+  * fix long desription.
+  * rename package name due to policy conflicts.
+  * fix version number.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 10 Sep 2005 22:24:27 +0200
+
+freeze-rc.d (0.2-3) unstable; urgency=low
+
+  * new upstream release: format of /etc/frozen-rc.d changed (now sorted & unique) 
+
+ -- Andreas Loibl <andreas@andreas-loibl.de>  Fri,  9 Sep 2005 09:26:35 +0200
+
+freeze-rc.d (0.2-2) unstable; urgency=low
+
+  * now this package comes with a patched update-rc.d
+
+ -- Andreas Loibl <andreas@andreas-loibl.de>  Thu,  8 Sep 2005 20:35:36 +0200
+
+freeze-rc.d (0.2-1) unstable; urgency=low
+
+  * new upstream release: policy-rc.d is now a bit more debian-compatible
+
+ -- Andreas Loibl <andreas@andreas-loibl.de>  Thu,  8 Sep 2005 17:59:42 +0200
+
+freeze-rc.d (0.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Andreas Loibl <andreas@andreas-loibl.de>  Thu,  8 Sep 2005 17:52:29 +0200

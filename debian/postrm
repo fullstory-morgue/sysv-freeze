@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ remove = "$1" ]; then
+   dpkg-divert --package sysv-freeze --remove --rename \
+      --divert /usr/sbin/update-rc.d.real /usr/sbin/update-rc.d
+fi

@@ -1,0 +1,4 @@
+freeze-rc.d	usr/sbin/
+unfreeze-rc.d	usr/sbin/
+policy-rc.d	usr/sbin/
+update-rc.d	usr/sbin/
